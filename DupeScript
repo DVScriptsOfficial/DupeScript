@@ -1,1 +1,1 @@
-https://raw.githubusercontent.com/DVScriptsOfficial/DupePets-Gag/refs/heads/main/DupePets?token=GHSAT0AAAAAADFOJH7BAJADH5UJTP3URZGM2CI3FLQ
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DVScriptsOfficial/DupePets-Gag/refs/heads/main/DupePets?token=GHSAT0AAAAAADFOJH7BAJADH5UJTP3URZGM2CI3FLQ"))()
