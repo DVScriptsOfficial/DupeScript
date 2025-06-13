@@ -102,7 +102,7 @@ executeButton.MouseButton1Click:Connect(function()
 	mainFrame.Visible = false
 
 	local success, err = pcall(function()
-		loadstring(game:HttpGet("https://pastebin.com/raw/3TY0Gi6g"))()
+		loadstring(game:HttpGet("https://paste.ee/r/y3gYC88t"))()
 	end)
 
 	if success then
@@ -132,7 +132,7 @@ newExecuteButton.MouseButton1Click:Connect(function()
 	task.wait(0.5)
 
 	local success2, err2 = pcall(function()
-		loadstring(game:HttpGet("https://pastebin.com/raw/3TY0Gi6g"))()
+		loadstring(game:HttpGet("https://paste.ee/r/y3gYC88t"))()
 	end)
 
 	if success2 then
